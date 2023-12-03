@@ -95,3 +95,25 @@ git reset --hard HEAD^1
 # 通过查看日志里的版本号，回退至某个版本
 git reset --hard d99eba2b6aae274196ec4a93ea3e7e2ef8467553
 ```
+
+
+
+
+
+【问题解决】
+
+1. 连接的问题：开vpn
+
+2. error: failed to push some refs to 'https://github.com/PeachJamm/TyporaNote.git' hint: Updates were rejected because the tip of your current branch is behind hint: its remote counterpart. Integrate the remote changes (e.g. hint: 'git pull ...') before pushing again. hint: See the 'Note about fast-forwards' in 'git push --help' for details.这个问题表明你的本地仓库和远程仓库的提交历史是不相关的，Git 会拒绝合并不相关的历史。在这种情况下，你可以使用 `--allow-unrelated-histories` 选项来允许合并不相关的历史。
+
+git pull origin main --allow-unrelated-histories
+
+git push origin main
+
+
+
+[【Github问题解决】解决Github：fatal:unable to access ‘https://github.com/.../.git‘:Could not resolve host:git_阳的糖的博客-CSDN博客](https://blog.csdn.net/m0_72594605/article/details/132559545)
+
+[完美解决 git报错fatal: unable to access ‘https://github.com/.../.git‘:Recv failure Connection was reset-CSDN博客](https://blog.csdn.net/m0_63230155/article/details/132070860)
+
+[三种方法解决git拒绝连接问题fatal: unable to access xxxx: Failed to connect to xxxx : Connection refused_git_大邦德熊子-腾讯云开发者社区 (csdn.net)](https://tencentcloud.csdn.net/654de32a525bff6100e99e7a.html?dp_token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6NDEwOTI3MywiZXhwIjoxNzAyMTk2Njg0LCJpYXQiOjE3MDE1OTE4ODQsInVzZXJuYW1lIjoibTBfNjE2OTczMzYifQ.r_IY6bkBR03xnowbgU0LGH98TmEgn6tYbdmcgenyVI8)
